@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --desaturated-red: hsl(0, 36%, 70%); 
+    --soft-red: hsl(0, 93%, 68%); 
+    --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box; 
+    margin: 0;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif; 
+    font-size: 1rem; 
+    width: 375px;
+}
+
+
+/* || HEADER SECTION */
+
+h1 {
+    padding-left: 1.5rem;
+    padding-block: 2rem;
+}
+
+
+/* || MAIN SECTION */
+
+main {
+    text-align: center; 
+}
+
+picture { max-width: 100%; }
+
+article { padding-inline: 2rem; padding-top: 1rem; }
+
+.header {
+    text-transform: uppercase; 
+    font-size: 2rem; 
+    font-weight: 600; 
+    letter-spacing: 0.5rem; 
+    margin-bottom: 0; 
+    padding-inline: 0.5rem; 
+    padding-block: 2rem 0.85rem;
+}
+
+.header > span {
+    color: var(--desaturated-red);
+    font-weight: 300;
+} 
+
+.description {
+    color: var(--desaturated-red); 
+    font-size: 0.75rem; 
+    line-height: 1.5; 
+}
+
+.form { 
+    /* margin-inline: auto; */ 
+    margin-block: 1.5rem;
+}
+
+form {
+    display: flex; 
+    justify-content: center; 
+}
+
+input {
+    font-family: inherit; 
+    font-size: 0.75rem;
+    padding: 0.75rem 5rem 0.75rem 1rem; 
+    border: 1px solid var(--desaturated-red); 
+    border-radius: 20px; 
+}
+
+button {
+    border: none; 
+    padding-inline: 1.25rem; 
+    padding-block: 0.25rem; 
+    border-radius: 20px; 
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%)); 
+    margin-left: -2rem;
+}
+
+button:hover {
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    cursor: pointer;
+}
+
+
+/* || FOOTER SECTION (FRONTEND MENTOR CUSTOM ATTRIBUTION STYLING) */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 2rem; 
+}
+
+.attribution a {
+    color: var(--dark-grayish-red);
+    /* color: hsl(228, 45%, 44%); */
+}
+
+
+/* || MEDIA QUERIES */ 
+
+@media screen and (min-width: 376px) {
+    body {
+        /* width: 1200px;  */
+        display: grid; 
+        grid-template-areas: 
+            "header picture" 
+            "article picture" 
+            "footer footer"; 
+        grid-template-columns: 3fr 2fr; 
+        column-gap: 5rem; 
+    }
+
+    main {
+        text-align: start; 
+        /* font-size: 15rem; */
+    }
+
+    header {
+        grid-area: header;
+    } 
+
+    picture {
+        grid-area: picture;
+    }
+
+    article {
+        grid-area: article; 
+        padding-inline: 10rem;
+    } 
+
+    footer {
+        grid-area: footer;
+    } 
+
+    h1 {
+        padding-left: 10rem;
+    }
+
+    .header {
+        padding-inline: 0;
+        padding-block: 2rem 0.85rem; 
+        font-size: 5rem;
+    } 
+    
+    .description {
+        font-size: 1rem;
+    }
+
+    form {
+        justify-content: start;
+    } 
+
+    input {
+        font-size: 1rem;
+        padding: 0.75rem 12.5rem 0.75rem 1rem;
+    } 
+
+    button {
+        padding-inline: 2rem;
+        padding-block: 0.25rem;
+    }
+}
